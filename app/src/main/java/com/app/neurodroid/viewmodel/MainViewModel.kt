@@ -1181,7 +1181,7 @@ class MainViewModel(application: Application, private val speak: Boolean) : Andr
                     processResponse(getRandomResponse(ResponseStrings.songNotFound), loadingItemId, speak, Category.OTHER)
                 } else if(videoId == "Missing API Key"){
                     val intent = Intent(Intent.ACTION_SEARCH)
-                    intent.setPackage("com.google.android.youtube")
+                    intent.setPackage("app.morphe.android.youtube")
                     intent.putExtra("query", searchQuery)
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
                     globalContext?.startActivity(intent)
