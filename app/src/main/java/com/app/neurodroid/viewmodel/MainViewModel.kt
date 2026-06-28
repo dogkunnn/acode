@@ -662,7 +662,7 @@ class MainViewModel(application: Application, private val speak: Boolean) : Andr
             .build()
 
         val requestBodyJson = JSONObject().apply {
-            put("model", "llama3-8b-8192")
+            put("model", "openai/gpt-oss-20b")
             put("messages", messagesArray)
             put("temperature", 1)
             put("top_p", 1)
